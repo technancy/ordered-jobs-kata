@@ -5,6 +5,18 @@ class JobsParser
   end
 
   def parse
-    TaskRunner.new
+    tasks.add(Job.new(split))
+
+    tasks
+  end
+
+  def split
+    @unparsed_jobs.split(' => ').first
+  end
+
+  private
+
+  def tasks
+    @tasks ||= TaskRunner.new
   end
 end
