@@ -57,3 +57,12 @@ Given the following job structure:
     f => b
 
 The result should be an error stating that jobs can’t have circular dependencies.
+
+
+Complete the ordered jobs kata with some minor amendments:
+
+All primitives must be wrapped in domain objects that represent their purpose.
+
+No code outside of the containing class may call methods on these primitives.
+
+
