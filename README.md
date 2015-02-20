@@ -17,7 +17,7 @@ Given the following job structure:
      a =>
      b =>
      c =>
-    
+
 The result should be a sequence containing all three jobs `abc` in no significant order.
 
 Given the following job structure:
@@ -29,14 +29,14 @@ Given the following job structure:
 The result should be a sequence that positions `c` before `b`, containing all three jobs `abc`.
 
 Given the following job structure:
-    
+
     a =>
     b => c
     c => f
     d => a
     e => b
     f =>
-  
+
 The result should be a sequence that positions`f` before `c`, `c` before `b`, `b` before `e` and `a` before `d` containing all six jobs `abcdef`.
 
 Given the following job structure:
@@ -48,7 +48,7 @@ Given the following job structure:
 The result should be an error stating that jobs can’t depend on themselves.
 
 Given the following job structure:
-    
+
     a =>
     b => c
     c => f
